@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using Business.Abstract;
+﻿using Business.Abstract;
 using DataAccess.Abstract;
-using DataAccess.Concrete.inMemory;
 using Entities.Concrete;
+using System.Collections.Generic;
 
 namespace Business.Concrete
 {
-    public class ProductManager: IProductService
+    public class ProductManager : IProductService
     {
         IProductDal _productDal;
 
@@ -31,7 +27,7 @@ namespace Business.Concrete
 
         public List<Product> GetByUnitPrice(decimal min, decimal max)
         {
-            return _productDal.GetAll(p=>p.UnitPrice <= min && p.UnitPrice <= max);
+            return _productDal.GetAll(p => p.UnitPrice <= min && p.UnitPrice <= max);
         }
     }
 }

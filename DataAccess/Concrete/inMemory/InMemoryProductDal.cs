@@ -1,10 +1,9 @@
-﻿using System;
+﻿using DataAccess.Abstract;
+using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using DataAccess.Abstract;
-using Entities.Concrete;
 
 namespace DataAccess.Concrete.inMemory
 {
@@ -52,7 +51,7 @@ namespace DataAccess.Concrete.inMemory
             productToUpdate.UnitsInStock = product.UnitsInStock;
             productToUpdate.CategoryId = product.CategoryId;
             productToUpdate.UnitPrice = product.UnitPrice;
-            
+
 
         }
 
